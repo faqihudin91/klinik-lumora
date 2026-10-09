@@ -1,69 +1,116 @@
-[Lumora](#)
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Klinik Lumora – Perawatan Kulit & Kecantikan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EEF3F5;--surface:#FFFFFF;--ink:#17233B;--muted:#58657C;--accent:#1F7A8C;--accent-ink:#FFFFFF;--blush:#F4D8D2;--line:#D3DDE3;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1A26;--surface:#172536;--ink:#EAF0F4;--muted:#9FB0C0;--accent:#5CC0D1;--accent-ink:#0F1A26;--blush:#3B2A2E;--line:#27384B}}
+:root[data-theme="dark"]{--bg:#0F1A26;--surface:#172536;--ink:#EAF0F4;--muted:#9FB0C0;--accent:#5CC0D1;--accent-ink:#0F1A26;--blush:#3B2A2E;--line:#27384B}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Figtree,system-ui,sans-serif}
+h1,h2,h3{font-family:'Bricolage Grotesque',Figtree,system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+.logo{font:800 22px 'Bricolage Grotesque',sans-serif;text-decoration:none}
+nav{display:flex;gap:22px;font-weight:500}
+nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--ink)}
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;padding:48px 0 72px}
+.hero h1{font-size:clamp(40px,7vw,76px);font-weight:800;letter-spacing:-.03em}
+.hero p{color:var(--muted);max-width:46ch;margin:22px 0 28px}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);font:600 17px Figtree,sans-serif;padding:14px 26px;border:0;border-radius:999px;text-decoration:none;cursor:pointer}
+.btn:hover{filter:brightness(1.08)}
+.orb{aspect-ratio:1;border-radius:46% 54% 50% 50%/55% 45% 55% 45%;background:radial-gradient(circle at 35% 30%,var(--blush),var(--accent) 120%);display:grid;place-items:center;padding:30px;text-align:center}
+.orb b{font:800 clamp(26px,4vw,38px)/1.1 'Bricolage Grotesque',sans-serif;color:#17233B}
+.orb span{display:block;font-size:15px;margin-top:8px;color:#17233B}
+section{padding:56px 0}
+h2{font-size:clamp(30px,4.5vw,44px);font-weight:700;letter-spacing:-.02em;margin-bottom:28px}
+.list{background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.row{display:grid;grid-template-columns:1fr auto;gap:6px 20px;padding:20px 24px;border-top:1px solid var(--line)}
+.row:first-child{border-top:0}
+.row h3{font-size:21px;font-weight:700}
+.row p{margin:4px 0 0;color:var(--muted);font-size:16px;grid-column:1}
+.price{font:700 19px 'Bricolage Grotesque',sans-serif;grid-row:1;grid-column:2;align-self:start;white-space:nowrap}
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.dr{background:var(--blush);border-radius:20px;padding:24px;color:var(--ink)}
+.dr h3{font-size:20px}.dr p{margin:6px 0 0;font-size:16px}
+.book{display:grid;grid-template-columns:1fr 1fr;gap:40px;background:var(--surface);border:1px solid var(--line);border-radius:28px;padding:40px}
+form{display:grid;gap:14px}
+label{font-weight:600;font-size:15px;display:grid;gap:6px}
+input,select{font:inherit;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink)}
+#ok{display:none;background:var(--blush);color:var(--ink);padding:16px 18px;border-radius:14px;font-weight:500}
+footer{padding:36px 0 48px;color:var(--muted);font-size:15px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+@media (max-width:760px){nav{display:none}.hero,.book{grid-template-columns:1fr}.team{grid-template-columns:1fr}.book{padding:26px}.orb{max-width:300px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><a class="logo" href="#">Lumora</a><nav aria-label="Menu utama"><a href="#layanan">Layanan</a><a href="#dokter">Dokter</a><a href="#janji">Buat janji</a></nav></header>
 
-[Layanan](#layanan)[Dokter](#dokter)[Buat janji](#janji)
+<div class="hero">
+<div>
+<h1>Kulit sehat dimulai dari konsultasi yang jujur.</h1>
+<p>Klinik Lumora merawat kulit dengan diagnosis dulu, baru tindakan. Anda hanya mendapat perawatan yang memang dibutuhkan kulit Anda.</p>
+<a class="btn" href="#janji">Buat janji konsultasi</a>
+</div>
+<div class="orb" aria-hidden="true"><div><b>Konsultasi pertama gratis</b><span>untuk pasien baru</span></div></div>
+</div>
 
-# Kulit sehat dimulai dari konsultasi yang jujur.
+<section id="layanan">
+<h2>Layanan kami</h2>
+<div class="list">
+<div class="row"><h3>Konsultasi &amp; analisis kulit</h3><span class="price">Rp150.000</span><p>Pemeriksaan jenis dan kondisi kulit oleh dokter, lengkap dengan rencana perawatan.</p></div>
+<div class="row"><h3>Facial jerawat</h3><span class="price">Rp275.000</span><p>Pembersihan pori, ekstraksi, dan masker penenang untuk kulit berjerawat.</p></div>
+<div class="row"><h3>Chemical peeling</h3><span class="price">Rp450.000</span><p>Meratakan warna kulit dan menyamarkan bekas jerawat secara bertahap.</p></div>
+<div class="row"><h3>Laser toning</h3><span class="price">Rp650.000</span><p>Mencerahkan kulit kusam dan menyamarkan noda hitam.</p></div>
+<div class="row"><h3>Hydrafacial</h3><span class="price">Rp550.000</span><p>Membersihkan dan melembapkan sekaligus, tanpa masa pemulihan.</p></div>
+</div>
+</section>
 
-Klinik Lumora merawat kulit dengan diagnosis dulu, baru tindakan. Anda hanya mendapat perawatan yang memang dibutuhkan kulit Anda.
+<section id="dokter">
+<h2>Dokter kami</h2>
+<div class="team">
+<div class="dr"><h3>dr. Anindya Prameswari, Sp.DV</h3><p>Dokter spesialis kulit. Fokus pada jerawat dan kulit sensitif.</p></div>
+<div class="dr"><h3>dr. Raka Wirantara</h3><p>Dokter estetika. Fokus pada laser dan peremajaan kulit.</p></div>
+<div class="dr"><h3>dr. Salsabila Nur</h3><p>Dokter umum bersertifikat estetika. Fokus pada perawatan harian.</p></div>
+</div>
+</section>
 
-[Buat janji konsultasi](#janji)
+<section id="janji">
+<div class="book">
+<div>
+<h2>Buat janji</h2>
+<p style="color:var(--muted);margin:0 0 16px">Pilih layanan dan hari yang Anda inginkan. Tim kami akan menghubungi Anda untuk memastikan jam kunjungan.</p>
+<p style="margin:0"><b>Jam buka</b><br>Senin–Sabtu, 09.00–19.00<br>Minggu tutup</p>
+</div>
+<form id="f">
+<label>Nama lengkap<input id="n" required autocomplete="name"></label>
+<label>Layanan<select id="s"><option>Konsultasi &amp; analisis kulit</option><option>Facial jerawat</option><option>Chemical peeling</option><option>Laser toning</option><option>Hydrafacial</option></select></label>
+<label>Tanggal kunjungan<input id="d" type="date" required></label>
+<button class="btn" type="submit">Kirim permintaan janji</button>
+<div id="ok" role="status"></div>
+</form>
+</div>
+</section>
 
-**Konsultasi pertama gratis**untuk pasien baru
-
-## Layanan kami
-
-### Konsultasi & analisis kulit
-
-Rp150.000
-
-Pemeriksaan jenis dan kondisi kulit oleh dokter, lengkap dengan rencana perawatan.
-
-### Facial jerawat
-
-Rp275.000
-
-Pembersihan pori, ekstraksi, dan masker penenang untuk kulit berjerawat.
-
-### Chemical peeling
-
-Rp450.000
-
-Meratakan warna kulit dan menyamarkan bekas jerawat secara bertahap.
-
-### Laser toning
-
-Rp650.000
-
-Mencerahkan kulit kusam dan menyamarkan noda hitam.
-
-### Hydrafacial
-
-Rp550.000
-
-Membersihkan dan melembapkan sekaligus, tanpa masa pemulihan.
-
-## Dokter kami
-
-### dr. Anindya Prameswari, Sp.DV
-
-Dokter spesialis kulit. Fokus pada jerawat dan kulit sensitif.
-
-### dr. Raka Wirantara
-
-Dokter estetika. Fokus pada laser dan peremajaan kulit.
-
-### dr. Salsabila Nur
-
-Dokter umum bersertifikat estetika. Fokus pada perawatan harian.
-
-## Buat janji
-
-Pilih layanan dan hari yang Anda inginkan. Tim kami akan menghubungi Anda untuk memastikan jam kunjungan.
-
-**Jam buka**\
-Senin–Sabtu, 09.00–19.00\
-Minggu tutup
-
-Nama lengkap Layanan Tanggal kunjungan
-
-Klinik Lumora · Jl. Melati Indah No. 12, Kota ContohSitus fiktif untuk contoh desain.
+<footer><span>Klinik Lumora · Jl. Melati Indah No. 12, Kota Contoh</span><span>Situs fiktif untuk contoh desain.</span></footer>
+</div>
+<script>
+var d=document.getElementById('d');
+try{d.min=new Date().toISOString().slice(0,10)}catch(e){}
+document.getElementById('f').addEventListener('submit',function(e){
+  e.preventDefault();
+  var o=document.getElementById('ok');
+  o.textContent='Terima kasih, '+document.getElementById('n').value+'. Permintaan janji untuk "'+document.getElementById('s').value+'" pada '+d.value+' sudah kami terima.';
+  o.style.display='block';
+});
+</script>
+</body>
+</html>
